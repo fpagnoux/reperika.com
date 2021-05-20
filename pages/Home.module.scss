@@ -1,0 +1,30 @@
+.hero {
+  background-image: url("/img/banner.jpeg");
+  height: calc(100vh - 65px);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-color: #2f3187;
+  background-position-x: 20%;
+
+  h1 {
+    color: white;
+  }
+
+  @media (min-width: 800px) {
+    background-position-x: 0;
+  }
+
+  [class="title-container"] {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+
+    h1 {
+      font-size: 2rem;
+      @media (min-width: 700px) {
+        font-size: 4rem;
+      }
+      margin-bottom: 10%;
+    }
+  }
+}
