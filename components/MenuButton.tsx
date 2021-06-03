@@ -34,7 +34,7 @@ export default function SimpleMenu({ title, items, id }: Props) {
         onClose={cloeMenu}
         anchorOrigin={{
           vertical: "bottom",
-          horizontal: "center",
+          horizontal: "left",
         }}
       >
         {items.map(({ title, href }) => {
