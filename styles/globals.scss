@@ -1,0 +1,38 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #303188;
+}
+
+h3 {
+  color: #51bd8e;
+}
+
+p,
+li {
+  line-height: 1.8em;
+}
+
+p a {
+  color: #61e0c0;
+  text-decoration: underline;
+
+  &:hover {
+    color: rgba(97, 224, 192, 0.6);
+  }
+}

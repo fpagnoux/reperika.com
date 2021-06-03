@@ -1,10 +1,14 @@
+import Container from "@material-ui/core/Container";
+
 import BaseLayout from "./BaseLayout";
+import styles from "./IssueLayout.module.scss";
 
 export default function IssueLayout({ children }) {
   return (
     <BaseLayout>
-      <h1>This is an issue</h1>
-      <div>{children}</div>
+      <Container maxWidth="md" className={styles.main}>
+        {children}
+      </Container>
     </BaseLayout>
   );
 }

@@ -28,7 +28,9 @@ export default function Header({}) {
     <header>
       <Container maxWidth="md">
         <div className={styles.header}>
-          <img src="/img/logo.png" />
+          <a href="/">
+            <img src="/img/logo.png" />
+          </a>
           <ul>
             {menuItems.map(({ title, href }) => (
               <Link key={href} href={href}>
