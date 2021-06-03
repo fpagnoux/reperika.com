@@ -1,6 +1,6 @@
 import Container from "@material-ui/core/Container";
 
-import Layout from "../components/Layout";
+import Layout from "../components/layouts/BaseLayout";
 
 import styles from "./Home.module.scss";
 
