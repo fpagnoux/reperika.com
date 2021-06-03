@@ -3,8 +3,21 @@ import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 
 import styles from "./Header.module.scss";
+import MenuButton from "./MenuButton";
 
-const menuItems = [
+type MenuLeaf = {
+  title: string;
+  href: string;
+};
+
+type MenuNode = {
+  title: string;
+  items: MenuLeaf[];
+};
+
+type Menu = (MenuLeaf | MenuNode)[];
+
+const menuItems: Menu = [
   {
     title: "About",
     href: "/about",
@@ -14,8 +27,11 @@ const menuItems = [
     href: "/contact",
   },
   {
-    title: "Agenda",
-    href: "/agenda",
+    title: "Issues",
+    items: [
+      { title: "Climate Crisis", href: "/issues/climate-crisis" },
+      { title: "Clean and Fair Elections", href: "/issues/clean-elections" },
+    ],
   },
   {
     title: "News",
@@ -32,14 +48,30 @@ export default function Header({}) {
             <img src="/img/logo.png" />
           </a>
           <ul>
-            {menuItems.map(({ title, href }) => (
-              <Link key={href} href={href}>
-                <Button>{title}</Button>
-              </Link>
-            ))}
+            {menuItems.map((item) => {
+              if (isMenuLeaf(item)) {
+                const { title, href } = item;
+                return (
+                  <Link key={href} href={href}>
+                    <Button>{title}</Button>
+                  </Link>
+                );
+              }
+              return (
+                <MenuButton
+                  title={item.title}
+                  items={item.items}
+                  id={item.title}
+                />
+              );
+            })}
           </ul>
         </div>
       </Container>
     </header>
   );
+}
+
+function isMenuLeaf(menuItem: MenuLeaf | MenuNode): menuItem is MenuLeaf {
+  return (menuItem as MenuLeaf).href != null;
 }
