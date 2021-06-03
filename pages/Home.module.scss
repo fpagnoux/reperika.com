@@ -4,7 +4,8 @@
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-color: #2f3187;
-  background-position-x: 20%;
+  background-position-x: 50%;
+  background-position-y: 50%;
 
   h1 {
     color: white;
@@ -14,7 +15,7 @@
     background-position-x: 0;
   }
 
-  [class="title-container"] {
+  .iconBar {
     display: flex;
     height: 100%;
     align-items: flex-end;
