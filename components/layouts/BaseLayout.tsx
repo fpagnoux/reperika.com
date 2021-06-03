@@ -15,7 +15,7 @@ export default function Layout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Alice:wght@400&amp;family=Montserrat:wght@400;700"
         />
         {/* TODO: opengraph tags */}
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/img/favicon.ico" />
       </Head>
 
       <Header />

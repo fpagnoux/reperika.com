@@ -31,6 +31,10 @@ const menuItems: Menu = [
     items: [
       { title: "Climate Crisis", href: "/issues/climate-crisis" },
       { title: "Clean and Fair Elections", href: "/issues/clean-elections" },
+      {
+        title: "Criminal Justice Reform",
+        href: "/issues/criminal-justice-reform",
+      },
     ],
   },
   {

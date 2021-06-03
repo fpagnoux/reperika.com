@@ -27,9 +27,9 @@ export default function Home() {
         <div className={styles.hero}>
           <Container maxWidth="md" style={{ height: "100%" }}>
             <div className={styles.iconBar}>
-              {heroItems.map(({ title, icon }) => (
+              {/* {heroItems.map(({ title, icon }) => (
                 <FontAwesomeIcon icon={icon} size="3x" />
-              ))}
+              ))} */}
               {/* <h1>Proudly serving Somerville</h1> */}
             </div>
           </Container>
