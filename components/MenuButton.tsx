@@ -17,7 +17,7 @@ export default function SimpleMenu({ title, items, id }: Props) {
     setAnchorEl(event.currentTarget);
   };
 
-  const cloeMenu = () => {
+  const close = () => {
     setAnchorEl(null);
   };
 
@@ -31,7 +31,7 @@ export default function SimpleMenu({ title, items, id }: Props) {
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
-        onClose={cloeMenu}
+        onClose={close}
         anchorOrigin={{
           vertical: "bottom",
           horizontal: "left",
