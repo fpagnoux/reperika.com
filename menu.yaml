@@ -1,7 +1,9 @@
 - title: About
   href: /about
 - title: Contact
-  href: /contact
+  items:
+    - title: Office Hours
+      href: /contact/office-hours
 - title: Services
   href: /services
 - title: Issues
