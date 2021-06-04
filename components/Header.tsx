@@ -25,9 +25,9 @@ export default function Header({}) {
     <header className={styles.headerContainer}>
       <Container maxWidth="md">
         <div className={styles.header}>
-          <a href="/">
+          <Link href="/">
             <img src="/img/logo.png" />
-          </a>
+          </Link>
           <ul>
             {(menu as Menu).map((item) => {
               if (isMenuLeaf(item)) {
