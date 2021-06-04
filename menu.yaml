@@ -1,5 +1,7 @@
 - title: About
-  href: /about
+  items:
+    - title: Committees & Caucuses
+      href: about/committees-caucuses
 - title: Contact
   items:
     - title: Office Hours
