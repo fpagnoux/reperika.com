@@ -20,6 +20,7 @@ export default function Layout({ children, title }: Props) {
         <meta property="og:type" content="website" />
         <meta property="og:description" content={settings.description} />
         <meta property="og:image" content={`${settings.url}/img/banner.jpeg`} />
+        <meta property=" og:url" content={settings.url} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="stylesheet"
