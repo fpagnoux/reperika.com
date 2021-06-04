@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Header from "../Header";
+import Footer from "../Footer";
 // @ts-expect-error
 import settings from "../../settings.yaml";
 
@@ -32,6 +33,7 @@ export default function Layout({ children, title }: Props) {
 
       <Header />
       <div className={styles.main}>{children}</div>
+      <Footer />
     </>
   );
 }
