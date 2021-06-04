@@ -1,6 +1,8 @@
 import Head from "next/head";
 
 import Header from "../Header";
+// @ts-expect-error
+import settings from "../../settings.yaml";
 
 import styles from "./BaseLayout.module.scss";
 
@@ -13,12 +15,20 @@ export default function Layout({ children, title }: Props) {
     <>
       <Head>
         <title>{pageTitle}</title>
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:site_name" content="Rep. Erika Uyterhoeven" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={settings.description} />
+        <meta
+          property="og:image"
+          content={`${settings.url}"/img/banner.jpeg"`}
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="stylesheet"
           type="text/css"
           href="https://fonts.googleapis.com/css2?family=Alice:wght@400&amp;family=Montserrat:wght@400;700"
         />
-        {/* TODO: opengraph tags */}
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
 
