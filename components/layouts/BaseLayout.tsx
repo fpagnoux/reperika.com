@@ -4,11 +4,15 @@ import Header from "../Header";
 
 import styles from "./BaseLayout.module.scss";
 
-export default function Layout({ children }) {
+type Props = { children: React.ReactElement; title?: string };
+
+export default function Layout({ children, title }: Props) {
+  const baseTitle = "Rep. Erika Uyterhoeven";
+  const pageTitle = title == null ? baseTitle : `${baseTitle} | ${title}`;
   return (
     <>
       <Head>
-        <title>Rep. Erika Uyterhoeven</title>
+        <title>{pageTitle}</title>
         <link
           rel="stylesheet"
           type="text/css"

@@ -5,7 +5,7 @@ import styles from "./DefaultLayout.module.scss";
 
 export default function IssueLayout({ children, frontMatter }) {
   return (
-    <BaseLayout>
+    <BaseLayout title={frontMatter.title}>
       <Container maxWidth="md" className={styles.main}>
         <h1>{frontMatter.title}</h1>
         {children}
