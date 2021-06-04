@@ -1,7 +1,7 @@
 import Container from "@material-ui/core/Container";
 
 import BaseLayout from "./BaseLayout";
-import styles from "./IssueLayout.module.scss";
+import styles from "./DefaultLayout.module.scss";
 
 export default function IssueLayout({ children, frontMatter }) {
   return (

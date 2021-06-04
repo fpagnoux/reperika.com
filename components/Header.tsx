@@ -81,7 +81,7 @@ const menuItems: Menu = [
 
 export default function Header({}) {
   return (
-    <header>
+    <header className={styles.headerContainer}>
       <Container maxWidth="md">
         <div className={styles.header}>
           <a href="/">
