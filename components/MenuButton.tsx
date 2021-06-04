@@ -36,14 +36,17 @@ export default function SimpleMenu({ title, items, id }: Props) {
           vertical: "bottom",
           horizontal: "left",
         }}
+        getContentAnchorEl={null}
       >
-        {items.map(({ title, href }) => {
-          return (
-            <Link key={href} href={href}>
-              <MenuItem>{title}</MenuItem>
-            </Link>
-          );
-        })}
+        <div>
+          {items.map(({ title, href }) => {
+            return (
+              <Link key={href} href={href}>
+                <MenuItem>{title}</MenuItem>
+              </Link>
+            );
+          })}
+        </div>
       </Menu>
     </>
   );

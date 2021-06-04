@@ -43,6 +43,7 @@ export default function Header({}) {
                   title={item.title}
                   items={item.items}
                   id={item.title}
+                  key={item.title}
                 />
               );
             })}

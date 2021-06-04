@@ -26,14 +26,14 @@ export default function Home() {
     <Layout>
       <main className={styles.main}>
         <div className={styles.hero}>
-          <Container maxWidth="md">
-            {/* <div className={styles.iconBar}> */}
-            {/* {heroItems.map(({ title, icon }) => (
+          {/* <Container maxWidth="md"> */}
+          {/* <div className={styles.iconBar}> */}
+          {/* {heroItems.map(({ title, icon }) => (
                 <FontAwesomeIcon icon={icon} size="3x" />
               ))} */}
-            {/* <h1>Proudly serving Somerville</h1> */}
-            {/* </div> */}
-          </Container>
+          {/* <h1>Proudly serving Somerville</h1> */}
+          {/* </div> */}
+          {/* </Container> */}
         </div>
         <div>
           <Container maxWidth="md">
