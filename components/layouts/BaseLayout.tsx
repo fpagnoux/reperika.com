@@ -19,10 +19,7 @@ export default function Layout({ children, title }: Props) {
         <meta property="og:site_name" content="Rep. Erika Uyterhoeven" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content={settings.description} />
-        <meta
-          property="og:image"
-          content={`${settings.url}"/img/banner.jpeg"`}
-        />
+        <meta property="og:image" content={`${settings.url}/img/banner.jpeg`} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="stylesheet"
