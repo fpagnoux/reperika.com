@@ -35,6 +35,42 @@ const menuItems: Menu = [
         title: "Criminal Justice Reform",
         href: "/issues/criminal-justice-reform",
       },
+      {
+        title: "Healthcare",
+        href: "/issues/healthcare",
+      },
+      {
+        title: "Housing",
+        href: "/issues/housing",
+      },
+      {
+        title: "Immigration",
+        href: "/issues/immigration",
+      },
+      {
+        title: "Labor",
+        href: "/issues/labor",
+      },
+      {
+        title: "Public Education",
+        href: "/issues/public-education",
+      },
+      {
+        title: "Racial Justice",
+        href: "/issues/racial-justice",
+      },
+      {
+        title: "Revenue and Economic Justice",
+        href: "/issues/revenue-econ-justice",
+      },
+      {
+        title: "Transparency",
+        href: "/issues/transparency",
+      },
+      {
+        title: "Transportation",
+        href: "/issues/transportation",
+      },
     ],
   },
   {
