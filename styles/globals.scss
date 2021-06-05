@@ -39,3 +39,9 @@ li a {
     color: rgba(97, 224, 192, 0.6);
   }
 }
+
+.modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

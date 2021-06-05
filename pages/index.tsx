@@ -1,5 +1,5 @@
 import Container from "@material-ui/core/Container";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
   faShieldVirus,
