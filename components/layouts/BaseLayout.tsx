@@ -28,6 +28,12 @@ export default function Layout({ children, title }: Props) {
           type="text/css"
           href="https://fonts.googleapis.com/css2?family=Alice:wght@400&amp;family=Montserrat:wght@400;700"
         />
+        <script
+          defer
+          charSet="utf-8"
+          type="text/javascript"
+          src="//js.hsforms.net/forms/shell.js"
+        ></script>
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
 

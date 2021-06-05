@@ -1,7 +1,6 @@
-import { useState } from "react";
-
 import Modal from "@material-ui/core/Modal";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+import HubspotForm from "react-hubspot-form";
 
 type Props = {
   open: boolean;
@@ -19,10 +18,16 @@ export default function NewsletterModal({ open, onClose }: Props) {
       aria-describedby="modal-description"
     >
       <div className={classes.paper + " modal"}>
-        <h2 id="modal-title">Text in a modal</h2>
+        <h2>Sign up for the newsletter</h2>
+        <HubspotForm
+          portalId="7055275"
+          formId="5a2a11ac-2121-4fa5-a7b3-e04c412c5ad3"
+        />
+
+        {/* <h2 id="modal-title">Text in a modal</h2>
         <p id="modal-description">
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-        </p>
+        </p> */}
       </div>
     </Modal>
   );
