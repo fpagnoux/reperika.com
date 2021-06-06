@@ -1,0 +1,10 @@
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: -10px;
+
+  button {
+    padding-right: 0;
+  }
+}

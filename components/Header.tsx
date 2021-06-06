@@ -7,6 +7,7 @@ import menu from "../menu.yaml";
 
 import styles from "./Header.module.scss";
 import MenuButton from "./MenuButton";
+import MobileMenu from "./MobileMenu";
 
 type MenuLeaf = {
   title: string;
@@ -28,29 +29,36 @@ export default function Header({}) {
           <Link href="/">
             <img src="/img/logo.png" />
           </Link>
-          <ul>
-            {(menu as Menu).map((item) => {
-              if (isMenuLeaf(item)) {
-                const { title, href } = item;
-                return (
-                  <Link key={href} href={href}>
-                    <Button>{title}</Button>
-                  </Link>
-                );
-              }
-              return (
-                <MenuButton
-                  title={item.title}
-                  items={item.items}
-                  id={item.title}
-                  key={item.title}
-                />
-              );
-            })}
-          </ul>
+          <DesktopMenu />
+          <MobileMenu />
         </div>
       </Container>
     </header>
+  );
+}
+
+function DesktopMenu() {
+  return (
+    <ul className="desktop-only">
+      {(menu as Menu).map((item) => {
+        if (isMenuLeaf(item)) {
+          const { title, href } = item;
+          return (
+            <Link key={href} href={href}>
+              <Button>{title}</Button>
+            </Link>
+          );
+        }
+        return (
+          <MenuButton
+            title={item.title}
+            items={item.items}
+            id={item.title}
+            key={item.title}
+          />
+        );
+      })}
+    </ul>
   );
 }
 
