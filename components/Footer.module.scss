@@ -1,8 +1,6 @@
 .footer {
   text-align: center;
 
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   background-color: #303188;
   position: fixed;
   bottom: 0;
@@ -26,9 +24,25 @@
   }
 }
 
+.footerContent {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .placeholder {
   @media (min-width: 700px) {
     height: 6rem;
   }
   height: 5rem;
+}
+
+.footerCloseButton {
+  button {
+    display: flex;
+    width: 1rem;
+  }
+  float: right;
+  text-align: right;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
 }
