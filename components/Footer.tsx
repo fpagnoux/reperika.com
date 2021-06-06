@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "@material-ui/core/Link";
 
 import NewsletterModal from "./NewsletterModal";
 import styles from "./Footer.module.scss";
@@ -9,17 +10,22 @@ export default function Footer({}) {
   return (
     <>
       <div className={styles.placeholder}></div>
-      <footer className={styles.footer}>
-        <a href="#" onClick={() => setIsNewsletterFormOpen(true)}>
-          Sign up for the newsletter
-        </a>
-        {isNewsletterFormOpen && (
-          <NewsletterModal
-            open={isNewsletterFormOpen}
-            onClose={() => setIsNewsletterFormOpen(false)}
-          />
-        )}
-      </footer>
+      {!isNewsletterFormOpen && (
+        <footer className={styles.footer}>
+          <Link
+            component="button"
+            onClick={() => setIsNewsletterFormOpen(true)}
+          >
+            Sign up for the newsletter
+          </Link>
+        </footer>
+      )}
+      {isNewsletterFormOpen && (
+        <NewsletterModal
+          open={isNewsletterFormOpen}
+          onClose={() => setIsNewsletterFormOpen(false)}
+        />
+      )}
     </>
   );
 }

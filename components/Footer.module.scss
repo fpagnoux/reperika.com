@@ -1,6 +1,6 @@
 .footer {
   text-align: center;
-  font-size: 3rem;
+
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: #303188;
@@ -10,9 +10,25 @@
   right: 0;
   margin-bottom: 0;
   z-index: 99999999;
-  color: #fff;
+
+  button {
+    color: #fff;
+    font-size: 1.5rem;
+    font: inherit;
+
+    @media (min-width: 700px) {
+      font-size: 2.5rem;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .placeholder {
-  height: 8rem;
+  @media (min-width: 700px) {
+    height: 6rem;
+  }
+  height: 5rem;
 }
