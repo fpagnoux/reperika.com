@@ -3,23 +3,12 @@ import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 
 // @ts-expect-error
-import menu from "../menu.yaml";
+import menu from "../../menu.yaml";
 
 import styles from "./Header.module.scss";
 import MenuButton from "./MenuButton";
 import MobileMenu from "./MobileMenu";
-
-type MenuLeaf = {
-  title: string;
-  href: string;
-};
-
-type MenuNode = {
-  title: string;
-  items: MenuLeaf[];
-};
-
-type Menu = (MenuLeaf | MenuNode)[];
+import { Menu, isMenuLeaf } from "./types";
 
 export default function Header({}) {
   return (
@@ -60,8 +49,4 @@ function DesktopMenu() {
       })}
     </ul>
   );
-}
-
-function isMenuLeaf(menuItem: MenuLeaf | MenuNode): menuItem is MenuLeaf {
-  return (menuItem as MenuLeaf).href != null;
 }

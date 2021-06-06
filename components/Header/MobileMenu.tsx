@@ -9,10 +9,12 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 // @ts-expect-error
-import menu from "../menu.yaml";
+import menu from "../../menu.yaml";
 
+import { Menu, isMenuLeaf } from "./types";
 import styles from "./MobileMenu.module.scss";
 
 const useStyles = makeStyles({
@@ -33,7 +35,7 @@ export default function MobileMenu() {
 
   const list = () => (
     <div
-      className={clsx(classes.list, {
+      className={clsx(styles.drawer, classes.list, {
         [classes.fullList]: false,
       })}
       role="presentation"
@@ -41,19 +43,34 @@ export default function MobileMenu() {
       onKeyDown={close}
     >
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        {(menu as Menu).map((item) => {
+          if (isMenuLeaf(item)) {
+            const { title, href } = item;
+            return (
+              <ListItem button key={href}>
+                <Link key={href} href={href}>
+                  <Button>{title}</Button>
+                </Link>
+              </ListItem>
+            );
+          }
+          return (
+            <>
+              <h3>{item.title}</h3>
+              <List>
+                {item.items.map(({ title, href }) => {
+                  return (
+                    <ListItem button key={href}>
+                      <Link key={href} href={href}>
+                        <Button>{title}</Button>
+                      </Link>
+                    </ListItem>
+                  );
+                })}
+              </List>
+            </>
+          );
+        })}
       </List>
     </div>
   );
