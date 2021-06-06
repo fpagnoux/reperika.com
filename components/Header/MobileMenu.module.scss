@@ -3,9 +3,12 @@
   justify-content: flex-end;
   align-items: center;
   margin-right: -10px;
+}
 
-  button {
-    padding-right: 0;
+.menuButton {
+  svg {
+    width: 2.5rem;
+    color: rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -62,4 +65,14 @@
 
 .menuAccordion:before {
   background: none !important; // Override Material
+}
+
+.imgHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 200px;
+  }
 }

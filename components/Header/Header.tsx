@@ -16,7 +16,9 @@ export default function Header({}) {
       <Container maxWidth="md">
         <div className={styles.header}>
           <Link href="/">
-            <img src="/img/logo.png" />
+            <a>
+              <img src="/img/logo.png" />
+            </a>
           </Link>
           <DesktopMenu />
           <MobileMenu />

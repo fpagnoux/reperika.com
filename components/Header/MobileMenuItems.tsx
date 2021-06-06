@@ -19,6 +19,13 @@ import styles from "./MobileMenu.module.scss";
 export default function MobileMenuItems() {
   return (
     <div className={styles.drawer}>
+      <div className={styles.imgHeader}>
+        <Link href="/">
+          <a>
+            <img src="/img/logo.png" />
+          </a>
+        </Link>
+      </div>
       {(menu as Menu).map((item, idx) => {
         if (isMenuLeaf(item)) {
           return (

@@ -30,7 +30,7 @@ export default function MobileMenu() {
 
   return (
     <div className={`mobile-only ${styles.menu}`}>
-      <Button onClick={open}>
+      <Button onClick={open} className={styles.menuButton}>
         <FontAwesomeIcon icon={faBars} size="1x" />
       </Button>
       <Drawer anchor="left" open={isOpen} onClose={close}>
