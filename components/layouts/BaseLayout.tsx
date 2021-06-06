@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 
 import Header from "../Header";
@@ -12,6 +13,8 @@ type Props = { children: React.ReactElement; title?: string };
 export default function Layout({ children, title }: Props) {
   const baseTitle = "Rep. Erika Uyterhoeven";
   const pageTitle = title == null ? baseTitle : `${baseTitle} | ${title}`;
+  const [hideFooter, setHideFooter] = useState<boolean>(false);
+
   return (
     <>
       <Head>
@@ -37,9 +40,9 @@ export default function Layout({ children, title }: Props) {
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header setHideFooter={setHideFooter} />
       <div className={styles.main}>{children}</div>
-      <Footer />
+      <Footer hideFooter={hideFooter} />
     </>
   );
 }

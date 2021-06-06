@@ -6,7 +6,11 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import NewsletterModal from "./NewsletterModal";
 import styles from "./Footer.module.scss";
 
-export default function Footer({}) {
+type Props = {
+  hideFooter: boolean;
+};
+
+export default function Footer({ hideFooter }: Props) {
   const [isNewsletterFormOpen, setIsNewsletterFormOpen] =
     useState<boolean>(false);
   const [showBanner, setShowBanner] = useState<boolean>(true);
@@ -27,7 +31,7 @@ export default function Footer({}) {
   return (
     <>
       <div className={styles.placeholder}></div>
-      {!isNewsletterFormOpen && showBanner && (
+      {!isNewsletterFormOpen && showBanner && !hideFooter && (
         <footer className={styles.footer}>
           <div className={styles.footerCloseButton}>
             <Link component="button" onClick={hideBanner}>

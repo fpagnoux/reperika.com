@@ -21,12 +21,22 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MobileMenu() {
+type Props = {
+  setHideFooter: (hide: boolean) => void;
+};
+
+export default function MobileMenu({ setHideFooter }: Props) {
   const classes = useStyles();
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
 
-  const open = () => setIsOpen(true);
-  const close = () => setIsOpen(false);
+  const open = () => {
+    setIsOpen(true);
+    setHideFooter(true);
+  };
+  const close = () => {
+    setIsOpen(false);
+    setHideFooter(false);
+  };
 
   return (
     <div className={`mobile-only ${styles.menu}`}>

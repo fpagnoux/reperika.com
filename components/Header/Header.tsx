@@ -10,7 +10,11 @@ import MenuButton from "./MenuButton";
 import MobileMenu from "./MobileMenu";
 import { Menu, isMenuLeaf } from "./types";
 
-export default function Header({}) {
+type Props = {
+  setHideFooter: (hide: boolean) => void;
+};
+
+export default function Header({ setHideFooter }: Props) {
   return (
     <header className={styles.headerContainer}>
       <Container maxWidth="md">
@@ -21,7 +25,7 @@ export default function Header({}) {
             </a>
           </Link>
           <DesktopMenu />
-          <MobileMenu />
+          <MobileMenu setHideFooter={setHideFooter} />
         </div>
       </Container>
     </header>
