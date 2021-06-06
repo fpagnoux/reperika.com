@@ -29,15 +29,13 @@ export default function MobileMenuItems() {
       {(menu as Menu).map((item, idx) => {
         if (isMenuLeaf(item)) {
           return (
-            <div className={styles.menuHeader}>
-              <Link key={item.href} href={item.href}>
-                {item.title}
-              </Link>
+            <div className={styles.menuHeader} key={item.href}>
+              <Link href={item.href}>{item.title}</Link>
             </div>
           );
         }
         return (
-          <Accordion className={styles.menuAccordion}>
+          <Accordion className={styles.menuAccordion} key={item.title}>
             <AccordionSummary
               expandIcon={<FontAwesomeIcon icon={faChevronDown} size="2x" />}
               aria-controls={`panel-content-${idx}`}
@@ -50,10 +48,8 @@ export default function MobileMenuItems() {
               <div className={styles.menuSection}>
                 {item.items.map(({ title, href }) => {
                   return (
-                    <div className={styles.menuLink}>
-                      <Link key={href} href={href}>
-                        {title}
-                      </Link>
+                    <div className={styles.menuLink} key={href}>
+                      <Link href={href}>{title}</Link>
                     </div>
                   );
                 })}
