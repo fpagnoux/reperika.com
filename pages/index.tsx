@@ -37,14 +37,15 @@ export default function Home() {
         </div>
         <div>
           <Container maxWidth="md">
-            <h1 id="contact">How to reach me</h1>
-            <p>Contact me at 857-264-1096 or Erika.Uyterhoeven@mahouse.gov</p>
-            <h3>Constituant service center</h3>
+            <h1 id="contact">Committed to serving you</h1>
+            <p>Do you need help with Massachusetts state services? Call Erika at 857-264-1096 or email at Erika.Uyterhoeven@mahouse.gov and my aide Lucas or I will get back to you within 24 hours, Monday through Friday.</p>
+            <h3>Constituent services include:</h3>
             <ul>
-              <li>Unemployment</li>
-              <li>Housing</li>
-              <li>Food Access</li>
-              <li>Covid Vaccine</li>
+              <li>Claiming unemployment insurance</li>
+              <li>Accessing MassHealth Connector</li>
+              <li>Assistance with housing and legal services</li>
+              <li>Help with food access and resources</li>
+              <li>Accessing the COVID-19 vaccine</li>
             </ul>
           </Container>
           <Container maxWidth="md">
