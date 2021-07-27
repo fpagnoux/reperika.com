@@ -39,9 +39,11 @@ function DesktopMenu() {
         if (isMenuLeaf(item)) {
           const { title, href } = item;
           return (
-            <Link key={href} href={href}>
-              <Button>{title}</Button>
-            </Link>
+            <Button key={href}>
+              <Link href={href}>
+                <a>{title}</a>
+              </Link>
+            </Button>
           );
         }
         return (

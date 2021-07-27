@@ -4,6 +4,8 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
+import styles from "./MenuButton.module.scss";
+
 type Props = {
   title: string;
   items: { title: string; href: string }[];
@@ -38,12 +40,14 @@ export default function SimpleMenu({ title, items, id }: Props) {
         }}
         getContentAnchorEl={null}
       >
-        <div>
+        <div className={styles.submenu}>
           {items.map(({ title, href }) => {
             return (
-              <Link key={href} href={href}>
-                <MenuItem>{title}</MenuItem>
-              </Link>
+              <MenuItem>
+                <Link key={href} href={href}>
+                  <a>{title}</a>
+                </Link>
+              </MenuItem>
             );
           })}
         </div>
