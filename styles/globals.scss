@@ -73,3 +73,53 @@ img {
     display: initial;
   }
 }
+
+// VAN stuff
+
+#fastaction-signup,
+#fastaction-login {
+  display: none;
+}
+
+.recaptcha-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.grecaptcha-badge {
+  position: unset !important;
+}
+
+.ngp-form {
+  section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.at label,
+.at textarea,
+.at input {
+  font-size: unset !important;
+}
+
+.at select {
+  font-size: 1rem !important;
+}
+
+.at legend {
+  display: none;
+}
+
+.at-submit.btn-at {
+  background-color: #303188 !important;
+}
+
+.at-legal p,
+.at-markup.FooterHtml p {
+  font-size: 11px;
+}
+
+header.at-title {
+  color: #51bd8e !important;
+}

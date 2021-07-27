@@ -1,9 +1,10 @@
 import Modal from "@material-ui/core/Modal";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
-import HubspotForm from "react-hubspot-form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import Link from "@material-ui/core/Link";
+
+import NGPVanForm from "./NGPVanForm";
 
 type Props = {
   open: boolean;
@@ -27,11 +28,7 @@ export default function NewsletterModal({ open, onClose }: Props) {
           </Link>
         </div>
         <div className={classes.content}>
-          <h2>Sign up for the newsletter</h2>
-          <HubspotForm
-            portalId="7055275"
-            formId="5a2a11ac-2121-4fa5-a7b3-e04c412c5ad3"
-          />
+          <NGPVanForm formId="https://secure.ngpvan.com/v1/Forms/YSMN-ckcd0ygwC2LGxj2aQ2" />
         </div>
       </div>
     </Modal>
